@@ -29,5 +29,12 @@ jobs:
             uses: actions/checkout@v4
           - name: stepTwo
             run:  "Get-childitem Env: | Sort-Object Name"
+    job3:
+        runs-on: macOS-latest
+        steps:
+          - name: stepOne
+            uses: actions/checkout@v4
+          - name: stepTwo
+            run:  printenv | sort
 
 
